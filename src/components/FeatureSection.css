@@ -6,8 +6,6 @@
   background-color: #FDFBF7;
   line-height: 0;
   
-  /* ✅ Left-Right Padding (Image ko center karne ke liye) */
-  padding: 0 70px;
   box-sizing: border-box;
 }
 

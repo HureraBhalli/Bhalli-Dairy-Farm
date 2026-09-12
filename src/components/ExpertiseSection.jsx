@@ -1,6 +1,13 @@
 import './ExpertiseSection.css';
 
 const ExpertiseSection = () => {
+   const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } 
+   };
+
   return (
     <section className="expertise-section">
       <div className="expertise-container">
@@ -65,7 +72,9 @@ const ExpertiseSection = () => {
 
         {/* ========== CONTACT US BUTTON ========== */}
         <div className="expertise-btn-wrapper">
-          <button className="expertise-btn">CONTACT US</button>
+          <button className="expertise-btn" onClick={() => scrollToSection('contact')}>
+            CONTACT US
+          </button>
         </div>
 
       </div>

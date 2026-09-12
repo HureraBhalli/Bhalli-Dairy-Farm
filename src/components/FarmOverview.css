@@ -5,17 +5,22 @@
 .farm-section {
   width: 100%;
   background-color: #FDFBF7;
-  padding: 80px 70px;
+  padding: 80px 0;
   box-sizing: border-box;
+  overflow: hidden;                   /* ✅ Image bahar na nikle */
 }
 
 .farm-container {
-  max-width: 1300px;
-  margin: 0 auto;
+  width: 100%;                        /* ✅ Full width */
+  max-width: 100%;                    /* ✅ Max width hata di */
+  margin: 0;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 70px;
   align-items: center;
+  padding-left: 0;                    /* ✅ Left 0 */
+  padding-right: 70px;                /* ✅ Sirf right padding */
+  box-sizing: border-box;
 }
 
 /* =========================================================
@@ -27,6 +32,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 18px;
   height: 480px;
+  margin-left: 0;                     /* ✅ Normal */
 }
 
 .farm-img {
@@ -37,12 +43,13 @@
   display: block;
 }
 
+/* ✅ Left image - screen edge tak, left rounded nahi */
 .farm-img-1 {
-  /* Left image - slightly different styling */
+  border-radius: 0 12px 12px 0;
 }
 
+/* ✅ Right image - badge ke liye relative */
 .farm-img-2 {
-  /* Right image - has the circular badge */
   position: relative;
 }
 
@@ -72,6 +79,7 @@
 .farm-content {
   display: flex;
   flex-direction: column;
+  padding-right: 40px;                /* ✅ Right content ke liye extra padding */
 }
 
 .farm-label {
@@ -168,24 +176,74 @@
    RESPONSIVE
    ========================================================= */
 
-@media (max-width: 1100px) {
-  .farm-section { padding: 70px 40px; }
-  .farm-container { gap: 50px; }
-  .farm-images { height: 400px; }
+@media (max-width: 1200px) {
+  .farm-container {
+    gap: 50px;
+    padding-right: 50px;
+  }
+  .farm-images {
+    height: 420px;
+  }
+}
+
+@media (max-width: 992px) {
+  .farm-section {
+    padding: 70px 0;
+  }
+  .farm-container {
+    gap: 45px;
+    padding-right: 40px;
+  }
+  .farm-images {
+    height: 380px;
+  }
 }
 
 @media (max-width: 900px) {
   .farm-container {
     grid-template-columns: 1fr;
     gap: 45px;
+    padding-right: 0;
+    padding-left: 40px;               /* ✅ Tablet pe left padding wapas */
   }
-  .farm-images { height: 350px; }
+  .farm-images {
+    height: 400px;
+  }
+  .farm-img-1 {
+    border-radius: 12px;              /* ✅ Sab rounded */
+  }
+  .farm-content {
+    padding-right: 40px;
+  }
 }
 
 @media (max-width: 600px) {
-  .farm-section { padding: 50px 22px; }
-  .farm-images { height: 300px; gap: 12px; }
-  .farm-img-2::after { width: 42px; height: 42px; font-size: 18px; left: -20px; }
-  .farm-heading { font-size: 1.6rem; margin-bottom: 28px; }
-  .farm-btn { padding: 14px 35px; font-size: 12px; }
+  .farm-section {
+    padding: 50px 0;
+  }
+  .farm-container {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .farm-images {
+    height: 300px;
+    gap: 12px;
+  }
+  .farm-img-2::after {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+    left: -20px;
+  }
+  .farm-heading {
+    font-size: 1.6rem;
+    margin-bottom: 28px;
+  }
+  .farm-btn {
+    padding: 14px 35px;
+    font-size: 12px;
+  }
+  .farm-content {
+    padding-right: 0;
+  }
 }

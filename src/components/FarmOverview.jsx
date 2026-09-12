@@ -1,6 +1,13 @@
 import './FarmOverview.css';
 
 const FarmOverview = () => {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } 
+   };
+
   return (
     <section className="farm-section">
       <div className="farm-container">
@@ -65,7 +72,9 @@ const FarmOverview = () => {
             </div>
           </div>
 
-          <button className="farm-btn">CONTACT US</button>
+          <button className="farm-btn" onClick={() => scrollToSection('contact')}>
+            CONTACT US
+          </button>
 
         </div>
       </div>

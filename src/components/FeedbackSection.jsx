@@ -1,14 +1,30 @@
 import './FeedbackSection.css';
 
 const FeedbackSection = () => {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } 
+   };
+
   return (
     <section className="feedback-section">
+
+      <div className="feedback-decoration">
+        <img 
+          src="/cow.svg" 
+          alt="Decorative line art" 
+          className="feedback-decoration-img" 
+        />
+      </div>
+
       <div className="feedback-container">
-        
+
         {/* ========== LEFT SIDE ========== */}
         <div className="feedback-left">
           
-          <span className="feedback-label">02. FEEDBACK</span>
+          <span className="feedback-label">05. FEEDBACK</span>
           <h2 className="feedback-heading">Users feedback</h2>
 
           {/* Avatars Row */}
@@ -25,17 +41,15 @@ const FeedbackSection = () => {
           </div>
 
           {/* Contact Button */}
-          <button className="feedback-btn">CONTACT US</button>
+          <button className="feedback-btn" onClick={() => scrollToSection('contact')}>
+            CONTACT US
+          </button>
 
-          {/* Decorative Line Art Background */}
-          <div className="feedback-decoration">
-           <img src="/cow.svg" alt="Decorative line art" className="feedback-decoration-img" />
-          </div>
         </div>
 
         {/* ========== RIGHT SIDE ========== */}
         <div className="feedback-right">
-          
+
           {/* Big Image */}
           <div className="feedback-image-wrapper">
             <img 
@@ -47,9 +61,7 @@ const FeedbackSection = () => {
 
           {/* Rating + Label Row */}
           <div className="feedback-meta">
-            <div className="feedback-stars">
-              ★★★★★
-            </div>
+            <div className="feedback-stars">★★★★★</div>
             <span className="feedback-meta-label">QUALITY PRODUCT & THING</span>
           </div>
 
