@@ -1,0 +1,306 @@
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
+
+.about-section {
+  width: 100%;
+  background-color: #FDFBF7;
+  padding: 100px 70px;
+  box-sizing: border-box;
+}
+
+.about-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TOP ROW
+   ========================================================= */
+
+.about-top {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 80px;
+  margin-bottom: 60px;
+  align-items: start;
+}
+
+.about-heading-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-label {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #2A4B2A;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.about-heading {
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-size: clamp(1.9rem, 2.8vw, 2.7rem);
+  font-weight: 600;
+  color: #2A4B2A;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  margin: 0;
+}
+
+/* Info Block */
+.about-info-block {
+  padding-top: 35px;
+}
+
+/* Rating Row */
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.avatars {
+  display: flex;
+  align-items: center;
+}
+
+.avatars img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #FDFBF7;
+  object-fit: cover;
+  margin-left: -12px;
+}
+
+.avatars img:first-child {
+  margin-left: 0;
+}
+
+.rating-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.rating-number {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2A4B2A;
+}
+
+.rating-label {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 12px;
+  color: #6a6a6a;
+  font-weight: 400;
+}
+
+/* Paragraph */
+.about-paragraph {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #555;
+  font-weight: 400;
+  max-width: 500px;
+  margin: 0;
+}
+
+/* =========================================================
+   BOTTOM GRID
+   ========================================================= */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  grid-template-rows: 1fr 0.55fr;
+  gap: 18px;
+  height: 580px;
+}
+
+.grid-card {
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  background-color: #e5e5e5;
+}
+
+.grid-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Card 1: Cow (Tall) --- */
+.cow-card {
+  grid-row: 1 / 3;
+  grid-column: 1 / 2;
+}
+
+/* --- Card 2: Farmer (Wide) --- */
+.farmer-card {
+  grid-row: 1 / 2;
+  grid-column: 2 / 4;
+}
+
+/* =========================================================
+    FIXED: Card 3: Green Values
+   ========================================================= */
+
+.values-card {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  background-color: #163A19;
+  padding: 28px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*  Cow icon FIXED size */
+.values-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.values-icon img {
+  width: 48px !important;
+  height: 48px !important;
+  max-width: 48px;
+  max-height: 48px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Values Content */
+.values-content {
+  margin-top: auto;
+}
+
+.values-content h3 {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.3px;
+}
+
+.values-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 12px;
+  color: #c9d5c9;
+  font-weight: 400;
+}
+
+.values-tags .divider {
+  color: #4d7a4d;
+  font-weight: 700;
+}
+
+/* =========================================================
+   Card 4: Yellow Stat
+   ========================================================= */
+
+.stat-card {
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+  background-color: #D4C24B;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative circle */
+.stat-card::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 30px solid rgba(255, 255, 255, 0.15);
+}
+
+.stat-number {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  color: #163A19;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -2px;
+  position: relative;
+  z-index: 2;
+}
+
+.stat-number span {
+  font-size: 42px;
+  font-weight: 700;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+.stat-label {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #163A19;
+  margin: 12px 0 0 0;
+  letter-spacing: 0.2px;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .about-section { padding: 70px 40px; }
+  .about-top { grid-template-columns: 1fr; gap: 40px; }
+  .about-info-block { padding-top: 0; }
+  .about-grid { height: 650px; }
+}
+
+@media (max-width: 800px) {
+  .about-section { padding: 50px 25px; }
+  .about-heading { font-size: 1.7rem; }
+  
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    height: auto;
+  }
+  
+  .cow-card { grid-column: 1 / 2; grid-row: 1 / 2; height: 280px; }
+  .farmer-card { grid-column: 2 / 3; grid-row: 1 / 2; height: 280px; }
+  .values-card { grid-column: 1 / 3; grid-row: 2 / 3; min-height: 170px; }
+  .stat-card { grid-column: 1 / 3; grid-row: 3 / 4; min-height: 180px; }
+  
+  .stat-number { font-size: 60px; }
+  .values-icon,
+  .values-icon img { width: 42px !important; height: 42px !important; }
+}

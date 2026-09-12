@@ -1,0 +1,192 @@
+/* =========================================================
+   WHY CHOOSE US SECTION (Dark Green Background)
+   ========================================================= */
+
+.why-section {
+  width: 100%;
+  background-color: #163A19;    /* ✅ Dark Green Background */
+  padding: 100px 70px;
+  box-sizing: border-box;
+}
+
+.why-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+/* =========================================================
+   LEFT COLUMN
+   ========================================================= */
+
+.why-left {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  position: sticky;       /* ✅ Image aur text sticky rahenge scroll pe */
+  top: 40px;
+}
+
+.why-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.why-label {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #E8C547;             /* ✅ Golden label */
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.why-heading {
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-size: clamp(1.8rem, 2.6vw, 2.5rem);
+  font-weight: 400;
+  color: #ffffff;              /* ✅ White heading */
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  margin: 0;
+}
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.why-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.why-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* Small circular badge */
+.why-image-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.badge-circle {
+  width: 55px;
+  height: 55px;
+  background-color: #D4C24B;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================================
+   RIGHT COLUMN (4 Cards)
+   ========================================================= */
+
+.why-right {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.why-card {
+  background-color: rgba(255, 255, 255, 0.02);   /* ✅ Slight transparency */
+  border: 1px solid rgba(255, 255, 255, 0.12);   /* ✅ Thin border */
+  border-radius: 10px;
+  padding: 30px 32px;
+  transition: all 0.3s ease;
+}
+
+.why-card:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(232, 197, 71, 0.4);           /* ✅ Golden on hover */
+  transform: translateX(5px);
+}
+
+/* =========================================================
+   CARD ICON
+   ========================================================= */
+
+.why-card-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.why-card-icon svg {
+  width: 36px;
+  height: 36px;
+}
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.why-card-title {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.3px;
+}
+
+/* =========================================================
+   CARD TEXT
+   ========================================================= */
+
+.why-card-text {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #a8bfa8;              /* ✅ Muted light green */
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .why-section { padding: 80px 40px; }
+  .why-container { gap: 50px; }
+  .why-heading { font-size: 1.8rem; }
+  .why-image-wrapper { max-width: 100%; }
+}
+
+@media (max-width: 900px) {
+  .why-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .why-left { position: static; }
+}
+
+@media (max-width: 600px) {
+  .why-section { padding: 60px 22px; }
+  .why-heading { font-size: 1.5rem; line-height: 1.25; }
+  .why-card { padding: 24px 22px; }
+  .why-card-title { font-size: 16px; }
+  .why-card-text { font-size: 13px; }
+  .badge-circle { width: 48px; height: 48px; font-size: 20px; }
+}

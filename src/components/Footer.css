@@ -1,0 +1,443 @@
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: #163a19; /* Dark Green */
+  padding: 80px 70px 40px 70px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* =========================================================
+   DECORATIVE BACKGROUND (House Image)
+   ========================================================= */
+
+.footer-decoration {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.footer-house-img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  opacity: 100;
+  filter: brightness(0.7) contrast(1.3);
+}
+
+/* =========================================================
+   FOOTER CONTENT WRAPPER
+   ========================================================= */
+
+.footer-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TOP AREA (3 Columns)
+   ========================================================= */
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 80px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 35px;
+}
+
+/* =========================================================
+   COLUMN 1: About Text
+   ========================================================= */
+
+.footer-col-about {
+  max-width: 560px;
+}
+
+.footer-about-text {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: 15px;
+  color: #e5ece5;
+  line-height: 1.75;
+  font-weight: 400;
+  margin: 0 0 32px 0;
+  letter-spacing: 0.1px;
+}
+
+/* =========================================================
+   AWARDS (3 Golden Badges)
+   ========================================================= */
+
+.footer-awards {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.award-badge {
+  width: 68px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(135deg, #e8c547 0%, #c9a82e 100%);
+  clip-path: polygon(
+    50% 0%,
+    75% 8%,
+    95% 22%,
+    100% 50%,
+    95% 78%,
+    75% 92%,
+    50% 100%,
+    25% 92%,
+    5% 78%,
+    0% 50%,
+    5% 22%,
+    25% 8%
+  );
+  box-shadow: 0 4px 12px rgba(232, 197, 71, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.award-badge:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+.award-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  padding: 6px;
+  color: #163a19;
+  text-align: center;
+  line-height: 1;
+}
+
+.award-title {
+  font-family: "Inter", sans-serif;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  line-height: 1;
+}
+
+.award-sub {
+  font-family: "Inter", sans-serif;
+  font-size: 5.5px;
+  font-weight: 600;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+.award-stars {
+  font-size: 7px;
+  margin: 1px 0;
+  letter-spacing: 0.3px;
+}
+
+.award-bottom {
+  font-family: "Inter", sans-serif;
+  font-size: 6px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+/* =========================================================
+   COLUMNS 2 & 3: Links
+   ========================================================= */
+
+.footer-col-title {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #e8c547;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0 0 24px 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-links li a {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: 14.5px;
+  font-weight: 400;
+  color: #d4dfd4;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block; 
+  padding-bottom: 2px;
+}
+
+.footer-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #e8c547;
+  transition: width 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: #e8c547;
+}
+
+.footer-links li a:hover::after {
+  width: 100%;
+}
+
+/* =========================================================
+   BOTTOM BAR
+   ========================================================= */
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-copyright {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: 14.5px;
+  color: #e5ece5;
+  margin: 0;
+  letter-spacing: 0.1px;
+}
+
+.footer-copyright a {
+  color: #e8c547;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-copyright a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   SOCIAL ICONS
+   ========================================================= */
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-socials a:hover {
+  background-color: rgba(232, 197, 71, 0.2);
+  transform: translateY(-2px);
+}
+
+.footer-socials a svg {
+  display: block;
+}
+
+/* =========================================================
+   RESPONSIVE - Large Desktop
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .footer {
+    padding: 70px 40px 35px 40px;
+  }
+  .footer-top {
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 50px;
+  }
+  .footer-house-img {
+    opacity: 0.1;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - Tablet
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+  }
+  .footer-col-about {
+    grid-column: 1 / 3;
+    max-width: 100%;
+  }
+  .footer-house-img {
+    opacity: 0.08;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - Mobile
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 55px 22px 30px 22px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-bottom: 40px;
+    margin-bottom: 25px;
+  }
+
+  .footer-col-about {
+    grid-column: auto;
+  }
+
+  .footer-about-text {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  /* Awards - Small Screens */
+  .footer-awards {
+    gap: 14px;
+  }
+
+  .award-badge {
+    width: 58px;
+    height: 66px;
+  }
+
+  .award-title {
+    font-size: 7px;
+  }
+
+  .award-sub {
+    font-size: 5px;
+  }
+
+  .award-stars {
+    font-size: 6px;
+  }
+
+  .award-bottom {
+    font-size: 5.5px;
+  }
+
+  /* Bottom Bar */
+  .footer-bottom {
+    flex-direction: column;
+    gap: 22px;
+    text-align: center;
+  }
+
+  .footer-copyright {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .footer-socials {
+    gap: 16px;
+  }
+
+  .footer-socials a {
+    width: 34px;
+    height: 34px;
+  }
+
+  .footer-house-img {
+    opacity: 0.08;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - Small Mobile
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .footer {
+    padding: 45px 18px 25px 18px;
+  }
+
+  .footer-about-text {
+    font-size: 13px;
+  }
+
+  .footer-awards {
+    gap: 10px;
+  }
+
+  .award-badge {
+    width: 52px;
+    height: 60px;
+  }
+
+  .award-title {
+    font-size: 6.5px;
+  }
+
+  .award-bottom {
+    font-size: 5px;
+  }
+
+  .footer-col-title {
+    font-size: 11px;
+  }
+
+  .footer-links li a {
+    font-size: 13.5px;
+  }
+
+  .footer-copyright {
+    font-size: 12px;
+  }
+
+  .footer-socials {
+    gap: 12px;
+  }
+
+  .footer-socials a {
+    width: 32px;
+    height: 32px;
+  }
+}

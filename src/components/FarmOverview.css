@@ -1,0 +1,191 @@
+/* =========================================================
+   FARM OVERVIEW SECTION
+   ========================================================= */
+
+.farm-section {
+  width: 100%;
+  background-color: #FDFBF7;
+  padding: 80px 70px;
+  box-sizing: border-box;
+}
+
+.farm-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* =========================================================
+   LEFT: 2 Images
+   ========================================================= */
+
+.farm-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  height: 480px;
+}
+
+.farm-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.farm-img-1 {
+  /* Left image - slightly different styling */
+}
+
+.farm-img-2 {
+  /* Right image - has the circular badge */
+  position: relative;
+}
+
+/* Circular badge on right image */
+.farm-img-2::after {
+  content: '🌿';
+  position: absolute;
+  bottom: 20px;
+  left: -28px;
+  width: 56px;
+  height: 56px;
+  background-color: #163A19;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  border: 3px solid #FDFBF7;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================================
+   RIGHT: Content
+   ========================================================= */
+
+.farm-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.farm-label {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #2A4B2A;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.farm-heading {
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-size: clamp(1.9rem, 2.8vw, 2.6rem);
+  font-weight: 400;
+  color: #2A4B2A;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  margin: 0 0 35px 0;
+}
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.farm-feature {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 28px;
+  align-items: flex-start;
+}
+
+.farm-feature-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.farm-feature-icon svg {
+  width: 36px;
+  height: 36px;
+}
+
+.farm-feature-text h3 {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #163A19;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.2px;
+}
+
+.farm-feature-text p {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 13px;
+  color: #6a6a6a;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.farm-btn {
+  background-color: #D4C24B;
+  color: #163A19;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 16px 45px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 10px;
+  box-shadow: 0 6px 18px rgba(212, 194, 75, 0.4);
+  transition: all 0.3s ease;
+}
+
+.farm-btn:hover {
+  background-color: #c2b03f;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(212, 194, 75, 0.5);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .farm-section { padding: 70px 40px; }
+  .farm-container { gap: 50px; }
+  .farm-images { height: 400px; }
+}
+
+@media (max-width: 900px) {
+  .farm-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+  .farm-images { height: 350px; }
+}
+
+@media (max-width: 600px) {
+  .farm-section { padding: 50px 22px; }
+  .farm-images { height: 300px; gap: 12px; }
+  .farm-img-2::after { width: 42px; height: 42px; font-size: 18px; left: -20px; }
+  .farm-heading { font-size: 1.6rem; margin-bottom: 28px; }
+  .farm-btn { padding: 14px 35px; font-size: 12px; }
+}

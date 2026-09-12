@@ -1,0 +1,295 @@
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 25px 60px;
+  background-color: #FDFBF7;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  position: relative;
+}
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.navbar-logo {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar-logo .logo-circle {
+  width: 62px;
+  height: 62px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.logo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 6px;
+}
+
+/* =========================================================
+   CENTER MENU (Desktop)
+   ========================================================= */
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  background-color: #fff;
+  padding: 16px 40px;
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.navbar-menu a {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  padding: 4px 0;
+}
+
+.navbar-menu a:hover {
+  color: #D4C24B;
+}
+
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #D4C24B;
+  transition: width 0.3s ease;
+}
+
+.navbar-menu a:hover::after {
+  width: 100%;
+}
+
+.mobile-btn {
+  display: none;
+}
+
+/* =========================================================
+   CONTACT BUTTON
+   ========================================================= */
+
+.contact-btn {
+  background-color: #D4C24B;
+  color: #fff;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 12.5px;
+  font-weight: 800;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 0.8px;
+  box-shadow: 0 6px 18px rgba(212, 194, 75, 0.5);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.contact-btn:hover {
+  background-color: #c2b03f;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   HAMBURGER
+   ========================================================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 1002;
+}
+
+.hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #2A4B2A;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 998;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* =========================================================
+   RESPONSIVE - Large Desktop
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .navbar { padding: 20px 40px; }
+  .navbar-menu { gap: 25px; padding: 14px 30px; }
+  .navbar-menu a { font-size: 12px; }
+  .contact-btn { padding: 14px 26px; font-size: 12px; }
+}
+
+/* =========================================================
+   RESPONSIVE - Tablet
+   ========================================================= */
+
+@media (max-width: 992px) {
+  .navbar { padding: 18px 30px; }
+  .navbar-menu { gap: 18px; padding: 12px 22px; }
+  .navbar-menu a { font-size: 11px; letter-spacing: 0.3px; }
+  .contact-btn { padding: 12px 22px; font-size: 11px; }
+  .navbar-logo .logo-circle { width: 54px; height: 54px; }
+}
+
+/* =========================================================
+   RESPONSIVE - Mobile (Hamburger Active)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .navbar { padding: 15px 22px; }
+
+  .navbar-logo .logo-circle { width: 50px; height: 50px; }
+
+  .hamburger { display: flex; }
+
+  .navbar-btn-wrapper { display: none; }
+
+  /* ✅ Mobile Menu - Slide-in from right */
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    max-width: 85vw;
+    height: 100vh;
+    background-color: #FDFBF7;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 100px 35px 40px;
+    border-radius: 0;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    
+    /* ✅ Hidden by default */
+    transform: translateX(105%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    z-index: 1000;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  /* ✅ Open state */
+  .navbar-menu.open {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .navbar-menu a {
+    font-size: 14px;
+    font-weight: 700;
+    color: #163A19;
+    padding: 16px 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(42, 75, 42, 0.08);
+    letter-spacing: 0.8px;
+  }
+
+  .navbar-menu a::after { display: none; }
+  .navbar-menu a:last-of-type { border-bottom: none; }
+  .navbar-menu a:hover { color: #D4C24B; padding-left: 8px; }
+
+  .mobile-btn {
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+    padding: 16px 30px;
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - Small Mobile
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .navbar { padding: 12px 18px; }
+  .navbar-logo .logo-circle { width: 44px; height: 44px; }
+  .navbar-menu { width: 85vw; padding: 90px 25px 30px; }
+  .navbar-menu a { font-size: 13px; padding: 14px 0; }
+}

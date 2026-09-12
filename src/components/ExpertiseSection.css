@@ -1,0 +1,199 @@
+/* =========================================================
+   EXPERTISE SECTION
+   ========================================================= */
+
+.expertise-section {
+  width: 100%;
+  background-color: #FDFBF7;
+  padding: 100px 70px 120px 70px;
+  box-sizing: border-box;
+}
+
+.expertise-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.expertise-header {
+  margin-bottom: 70px;
+}
+
+.expertise-label {
+  display: block;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #2A4B2A;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.expertise-heading {
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 600;
+  color: #2A4B2A;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+/* =========================================================
+   GRID (4 Cards)
+   ========================================================= */
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 70px;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.expertise-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image Container with rounded corners */
+.expertise-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 22px;
+  background-color: #eee;
+}
+
+.expertise-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.expertise-card:hover .expertise-image img {
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   WHITE CIRCLE WITH ICON
+   ========================================================= */
+
+.expertise-icon-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+}
+
+.expertise-icon-circle svg {
+  width: 44px;
+  height: 44px;
+}
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.expertise-card-title {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #163A19;
+  margin: 0;
+  letter-spacing: -0.3px;
+  text-align: center;
+}
+
+/* =========================================================
+   CONTACT BUTTON
+   ========================================================= */
+
+.expertise-btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.expertise-btn {
+  background-color: #D4C24B;
+  color: #163A19;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 20px 60px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(212, 194, 75, 0.4);
+  transition: all 0.3s ease;
+}
+
+.expertise-btn:hover {
+  background-color: #c2b03f;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(212, 194, 75, 0.5);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .expertise-section { padding: 80px 40px 100px 40px; }
+  .expertise-grid { gap: 18px; }
+  .expertise-icon-circle { width: 75px; height: 75px; }
+  .expertise-icon-circle svg { width: 36px; height: 36px; }
+}
+
+@media (max-width: 900px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .expertise-section { padding: 60px 22px 80px 22px; }
+  .expertise-header { margin-bottom: 45px; }
+  .expertise-heading { font-size: 1.6rem; }
+  
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 50px;
+  }
+  
+  .expertise-icon-circle { width: 70px; height: 70px; }
+  .expertise-icon-circle svg { width: 34px; height: 34px; }
+  
+  .expertise-card-title { font-size: 15px; }
+  
+  .expertise-btn {
+    padding: 16px 45px;
+    font-size: 13px;
+  }
+}

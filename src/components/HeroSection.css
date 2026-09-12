@@ -1,0 +1,313 @@
+/* =========================================================
+   HERO SECTION - DESKTOP (Exact Design Preserved)
+   ========================================================= */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 317px;
+  background: #fdfbf2;
+  padding: 0 6.5%;
+  overflow: visible;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.hero-title {
+  position: absolute;
+  height: 119px;
+  left: 200px;
+  top: calc(50% - 119px / 2 - 90.5px);
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  font-size: 6.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #163A19;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.hero-content {
+  position: absolute;
+  height: 102px;
+  left: 0;
+  right: 0;
+  top: calc(50% - 102px / 2 + 80px);
+  margin: 0;
+  padding: 0;
+  z-index: 10;
+}
+
+/* Badge */
+.hero-badge {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 46px;
+  top: 1px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 100px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.badge-inner {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  border-radius: 100px;
+  background: transparent;
+  display: block;
+  overflow: hidden;
+}
+
+.badge-inner img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+}
+
+/* Paragraph */
+.hero-text {
+  position: absolute;
+  height: 102px;
+  left: 176px;
+  right: 504px;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  color: #163A19;
+  text-align: left;
+}
+
+/* =========================================================
+   YELLOW SPLASH
+   ========================================================= */
+
+.yellow-splash {
+  position: absolute;
+  top: 68px;
+  right: 8%;
+  width: 285px;
+  z-index: 20;
+  pointer-events: none;
+  animation: floatSplash 5s ease-in-out infinite;
+}
+
+.yellow-splash img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 25px rgba(225, 174, 0, 0.22));
+}
+
+@keyframes floatSplash {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50%      { transform: translateY(-5px) rotate(0deg); }
+}
+
+/* =========================================================
+   RESPONSIVE - 1400px+
+   ========================================================= */
+
+@media (min-width: 1400px) {
+  .hero-section { padding-left: 6%; padding-right: 6%; }
+  .hero-title { font-size: 7rem; }
+  .hero-content { left: 6%; }
+  .yellow-splash { width: 320px; right: 3%; }
+}
+
+/* =========================================================
+   RESPONSIVE - 1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: clamp(3rem, 6.4vw, 4.5rem);
+    letter-spacing: -2.8px;
+    left: 100px;
+  }
+  .yellow-splash { width: 250px; right: 2%; }
+  .hero-text { width: 300px; max-width: 300px; font-size: 15px; line-height: 24px; }
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET (max 900px)
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .hero-section {
+    height: auto;
+    min-height: 380px;
+    padding: 40px 35px 50px;
+  }
+
+  .hero-title {
+    position: relative;
+    left: auto;
+    top: auto;
+    height: auto;
+    font-size: clamp(2.2rem, 7vw, 3.5rem);
+    letter-spacing: -1px;
+    white-space: normal;
+    margin: 0 0 30px 0;
+    line-height: 1.05;
+  }
+
+  .hero-content {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+    margin-bottom: 30px;
+  }
+
+  .hero-badge {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+  }
+
+  .badge-inner,
+  .badge-inner img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .hero-text {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    height: auto;
+    font-size: 14px;
+    line-height: 22px;
+    width: auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  .yellow-splash {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 20px auto 0;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE (max 600px)
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 30px 22px 45px;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+    line-height: 1.1;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .hero-badge {
+    width: 70px;
+    height: 70px;
+  }
+
+  .badge-inner,
+  .badge-inner img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .hero-text {
+    font-size: 13.5px;
+    line-height: 1.55;
+    text-align: left;
+  }
+
+  .yellow-splash {
+    width: 160px;
+    margin-top: 15px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE (max 400px)
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .hero-section {
+    padding: 25px 18px 40px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-badge {
+    width: 62px;
+    height: 62px;
+  }
+
+  .badge-inner,
+  .badge-inner img {
+    width: 62px;
+    height: 62px;
+  }
+
+  .hero-text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .yellow-splash {
+    width: 140px;
+  }
+}
