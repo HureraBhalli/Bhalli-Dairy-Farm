@@ -4,7 +4,7 @@
 
 .farm-section {
   width: 100%;
-  background-color: #FDFBF7;
+  background-color: white;
   padding: 80px 0;
   box-sizing: border-box;
   overflow: hidden;
@@ -30,25 +30,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
-  /* ✅ Height hata di - ab aspect-ratio control karega */
 }
 
 .farm-img {
   width: 100%;
-  height: auto;                       /* ✅ Aspect-ratio ke saath auto */
+  height: auto;                   
   object-fit: cover;
-  aspect-ratio: 3 / 4;                /* ✅ Portrait ratio */
+  aspect-ratio: 3 / 4;                
   border-radius: 12px;
   display: block;
 }
 
-/* ✅ Left image - screen edge tak */
 .farm-img-1 {
   border-radius: 0 12px 12px 0;
   transform: translateX(-30px); 
 }
 
-/* ✅ Right image - badge ke liye relative */
 .farm-img-2 {
   position: relative;
 }
