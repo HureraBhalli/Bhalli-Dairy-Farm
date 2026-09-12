@@ -4,7 +4,7 @@
 
 .contact-section {
   width: 100%;
-  background-color: #E8E8E8;
+  background-color: white;
   padding: 100px 70px;
   box-sizing: border-box;
 }
@@ -86,7 +86,7 @@
    ========================================================= */
 
 .contact-form {
-  background-color: #E8E8E8;
+  background-color: white;
   border: 1px solid rgb(215, 213, 213);
   border-radius: 8px;
   padding: 50px;
@@ -128,7 +128,7 @@
 .contact-field input,
 .contact-field textarea {
   width: 100%;
-  background-color: #F5F3EE;
+  background-color: whitesmoke;
   border: 1px solid #e5e5e5;
   border-radius: 4px;
   padding: 16px 18px;
