@@ -4,7 +4,7 @@
 
 .feedback-section {
   width: 100%;
-  background-color: #F0EBD8;
+  background-color: #F6F4EF;
   padding: 120px 70px 90px 70px;   
     margin-top: 120px; 
   box-sizing: border-box;
@@ -70,19 +70,9 @@
   object-fit: cover;
   border: 3px solid transparent;
   cursor: pointer;
-  transition: all 0.3s ease;
-  opacity: 0.5;
+
 }
 
-.feedback-avatars img.active {
-  opacity: 1;
-  border-color: #2A4B2A;
-}
-
-.feedback-avatars img:hover {
-  opacity: 1;
-  transform: scale(1.05);
-}
 
 /* =========================================================
    USER INFO
@@ -155,7 +145,7 @@
   object-fit: contain;
   object-position: center;
   display: block;
-  opacity: 0.30;                   
+  opacity: 1.00;                   
   filter: brightness(0) invert(1);    
 }
 

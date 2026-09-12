@@ -29,15 +29,15 @@ const FeedbackSection = () => {
 
           {/* Avatars Row */}
           <div className="feedback-avatars">
-            <img src="https://i.pravatar.cc/80?img=12" alt="user1" className="active" />
-            <img src="https://i.pravatar.cc/80?img=45" alt="user2" />
-            <img src="https://i.pravatar.cc/80?img=32" alt="user3" />
+            <img src="https://cdn.pixabay.com/photo/2022/06/23/05/26/smart-boy-picture-7279162_1280.jpg" alt="user1" className="active" />
+            <img src="https://i.pinimg.com/474x/dd/27/95/dd2795c347b98ce4008a7193a6022b9b.jpg" alt="user2" />
+            <img src="https://i.pinimg.com/originals/ea/1f/48/ea1f48b10cfb6135ad915b87fefba2c7.jpg" alt="user3" />
           </div>
 
           {/* User Info */}
           <div className="feedback-user">
-            <h4>Elson H. Hallam</h4>
-            <p>CEO, Google</p>
+            <h4>Dr. Ali Hassan</h4>
+            <p>LiveStock</p>
           </div>
 
           {/* Contact Button */}

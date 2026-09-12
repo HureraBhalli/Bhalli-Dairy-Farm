@@ -7,19 +7,18 @@
   background-color: #FDFBF7;
   padding: 80px 0;
   box-sizing: border-box;
-  overflow: hidden;                   /* ✅ Image bahar na nikle */
+  overflow: hidden;
 }
 
 .farm-container {
-  width: 100%;                        /* ✅ Full width */
-  max-width: 100%;                    /* ✅ Max width hata di */
+  width: 100%;
   margin: 0;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 70px;
   align-items: center;
-  padding-left: 0;                    /* ✅ Left 0 */
-  padding-right: 70px;                /* ✅ Sirf right padding */
+  padding-left: 0;
+  padding-right: 70px;
   box-sizing: border-box;
 }
 
@@ -31,21 +30,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
-  height: 480px;
-  margin-left: 0;                     /* ✅ Normal */
+  /* ✅ Height hata di - ab aspect-ratio control karega */
 }
 
 .farm-img {
   width: 100%;
-  height: 100%;
+  height: auto;                       /* ✅ Aspect-ratio ke saath auto */
   object-fit: cover;
+  aspect-ratio: 3 / 4;                /* ✅ Portrait ratio */
   border-radius: 12px;
   display: block;
 }
 
-/* ✅ Left image - screen edge tak, left rounded nahi */
+/* ✅ Left image - screen edge tak */
 .farm-img-1 {
   border-radius: 0 12px 12px 0;
+  transform: translateX(-30px); 
 }
 
 /* ✅ Right image - badge ke liye relative */
@@ -79,7 +79,7 @@
 .farm-content {
   display: flex;
   flex-direction: column;
-  padding-right: 40px;                /* ✅ Right content ke liye extra padding */
+  padding-right: 40px;
 }
 
 .farm-label {
@@ -173,7 +173,7 @@
 }
 
 /* =========================================================
-   RESPONSIVE
+   RESPONSIVE - Large Desktop
    ========================================================= */
 
 @media (max-width: 1200px) {
@@ -181,41 +181,33 @@
     gap: 50px;
     padding-right: 50px;
   }
-  .farm-images {
-    height: 420px;
-  }
 }
 
-@media (max-width: 992px) {
+/* =========================================================
+   RESPONSIVE - Tablet
+   ========================================================= */
+
+@media (max-width: 900px) {
   .farm-section {
     padding: 70px 0;
   }
   .farm-container {
+    grid-template-columns: 1fr;
     gap: 45px;
+    padding-left: 40px;
     padding-right: 40px;
   }
-  .farm-images {
-    height: 380px;
+  .farm-img-1 {
+    border-radius: 12px;
+  }
+  .farm-content {
+    padding-right: 0;
   }
 }
 
-@media (max-width: 900px) {
-  .farm-container {
-    grid-template-columns: 1fr;
-    gap: 45px;
-    padding-right: 0;
-    padding-left: 40px;               /* ✅ Tablet pe left padding wapas */
-  }
-  .farm-images {
-    height: 400px;
-  }
-  .farm-img-1 {
-    border-radius: 12px;              /* ✅ Sab rounded */
-  }
-  .farm-content {
-    padding-right: 40px;
-  }
-}
+/* =========================================================
+   RESPONSIVE - Mobile
+   ========================================================= */
 
 @media (max-width: 600px) {
   .farm-section {
@@ -224,9 +216,9 @@
   .farm-container {
     padding-left: 22px;
     padding-right: 22px;
+    gap: 35px;
   }
   .farm-images {
-    height: 300px;
     gap: 12px;
   }
   .farm-img-2::after {
@@ -234,6 +226,7 @@
     height: 42px;
     font-size: 18px;
     left: -20px;
+    bottom: 15px;
   }
   .farm-heading {
     font-size: 1.6rem;
@@ -242,8 +235,5 @@
   .farm-btn {
     padding: 14px 35px;
     font-size: 12px;
-  }
-  .farm-content {
-    padding-right: 0;
   }
 }

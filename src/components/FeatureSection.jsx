@@ -4,7 +4,7 @@ const FeatureSection = () => {
   return (
     <section className="feature-section">
       <img 
-        src="/Bhali.png"     
+        src="/Bhali1.png"     
         alt="Dairy Farm" 
         className="feature-image"
       />

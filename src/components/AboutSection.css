@@ -245,7 +245,8 @@
 }
 
 .stat-number {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif;
+  font-style: normal;
   font-size: 72px;
   font-weight: 800;
   color: #163A19;
@@ -265,7 +266,7 @@
 
 .stat-label {
   font-family: 'Inter', 'Segoe UI', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   color: #163A19;
   margin: 12px 0 0 0;

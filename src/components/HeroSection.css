@@ -18,16 +18,17 @@
 
 .hero-title {
   position: absolute;
-  height: 119px;
-  left: 250px;
+  left:4.0%;                       
+  right: 6.5%;                      
   top: calc(50% - 119px / 2 - 90.5px);
-  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  height: 119px;
+  font-family: 'Poppins', 'Inter', 'Segoe UI', sans-serif;
   font-weight: 600;
-  font-size: 6.5rem;
+  font-size: clamp(5rem, 9vw, 9.5rem)!important; 
   line-height: 1;
   display: flex;
   align-items: center;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #163A19;
   margin: 0;
@@ -55,7 +56,7 @@
   position: absolute;
   width: 100px;
   height: 100px;
-  left: 46px;
+  left: -1.0%!important;                       
   top: 1px;
   margin: 0;
   padding: 0;
@@ -89,15 +90,15 @@
 .hero-text {
   position: absolute;
   height: 102px;
-  left: 176px;
-  right: 504px;
+  left: 120px;                      
+  right: 750px;                  
   top: 0;
   margin: 0;
   padding: 0;
   font-family: 'Poppins', 'Segoe UI', sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;               
+  line-height: 24px;               
   display: flex;
   align-items: center;
   color: #163A19;

@@ -36,7 +36,7 @@ const WhyChooseUs = () => {
             </div>
             <h3 className="why-card-title">Rotational grazing</h3>
             <p className="why-card-text">
-              Cattle are rotated across pastures to prevent overgrazing, promote soil health, and sequester carbon.
+              We rotate cattle between pastures to support healthy grass, better soil, and sustainable farming.
             </p>
           </div>
 
@@ -47,7 +47,7 @@ const WhyChooseUs = () => {
             </div>
             <h3 className="why-card-title">Organic food</h3>
             <p className="why-card-text">
-              Rotational grazing helps prevent overgrazing, improve soil quality, and support carbon sequestration.
+             We provide naturally produced dairy products made with care, quality, and responsible farming practices.
             </p>
           </div>
 
@@ -58,7 +58,7 @@ const WhyChooseUs = () => {
             </div>
             <h3 className="why-card-title">Biodiversity protection</h3>
             <p className="why-card-text">
-              Cattle are moved between pastures to avoid overgrazing, enhance soil fertility.
+              Our farming practices help protect natural habitats and support a healthy, balanced ecosystem.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ const WhyChooseUs = () => {
             </div>
             <h3 className="why-card-title">Technology-powered barns</h3>
             <p className="why-card-text">
-              By shifting cattle across pastures, we maintain soil health, reduce overgrazing.
+             Modern barn technology helps us maintain better animal care, hygiene, comfort, and milk quality.
             </p>
           </div>
 
